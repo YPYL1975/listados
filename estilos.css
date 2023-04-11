@@ -1,0 +1,81 @@
+*{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+ul{
+  width: 100%;
+list-style: none;
+margin: 0;
+padding: 0;
+float: left;
+}
+
+ul li {
+  padding: 5px;
+  padding-left: 15%;
+  color: rgb(7, 11, 241);
+  background-color: aqua;
+  border-top: 5px solid #ccc;
+  border-right: 5px solid slateblue;
+  border-left: 5px solid rgb(19, 75, 43);
+  border-bottom: 5px solid salmon;
+  transition: all 0.5s;
+  float: left;
+}
+/* El simbolo dos puntos justo despues de un elemto nos permite ser mas especificos para ciertos casos */
+ul li:last-child{
+ border-bottom: 3px solid navy;
+}
+
+ul li:hover{
+  cursor:pointer;
+  background-color: brown;
+  font-size: 20px;  
+  transform: scale(1.1, 1.1);
+}
+
+ul.menu{
+clear: both;
+float: left;
+width: 100%;
+border: none;
+}
+
+ul.menu li{
+float: left;
+padding: 0;
+border-top:2px solid violet ;
+border-bottom:2px solid violet;
+border-left:2px solid violet ;
+border-right: 0;
+}
+
+ul.menu li:last-child{
+  border-right: 2px solid violet;
+}
+
+@media  (max-width: 300px){
+  ul.menu {
+    width: 200px;
+    float: none;    
+  }
+
+  body {
+    background-color: cadetblue;
+  }
+
+  ul.menu li {
+    float: none;  
+    border-bottom: none;  
+  }
+
+  ul.menu li:first-child{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px ;
+  }
+
+  ul.menu li:last-child{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;   
+  }
+}
